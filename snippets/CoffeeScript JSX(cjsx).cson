@@ -1,0 +1,90 @@
+{
+".source.coffee":
+  "CJSX: cx = React.addons.classSet":
+    prefix: "cs"
+    body: "\ncx = React.addons.classSet\n"
+
+  "CJSX: componentDidMount: () -> ... ":
+    prefix: "cdm"
+    body: "\ncomponentDidMount: () -> \n\t${1}\n\n"
+
+  "CJSX: componentDidUpdate: (pp, ps) -> ... ":
+    prefix: "cdup"
+    body: "\ncomponentDidUpdate: (prevProps, prevState) -> \n\t${1}\n\n"
+
+  "CJSX: componentWillMount: () -> ... ":
+    prefix: "cwm"
+    body: "\ncomponentWillMount: () -> \n\t${1}\n\n"
+
+  "CJSX: componentWillReceiveProps: (np) -> ... ":
+    prefix: "cwr"
+    body: "\ncomponentWillReceiveProps: (nextProps) -> \n\t${1}\n\n"
+
+  "CJSX: componentWillUnmount: () ... ":
+    prefix: "cwun"
+    body: "\ncomponentWillUnmount: () -> \n\t${1}\n\n"
+
+  "CJSX: componentWillUpdate: (np, ns) -> ... ":
+    prefix: "cwu"
+    body: "\ncomponentWillUpdate: (nextProps, nextState) -> \n\t${1}\n\n"
+
+  "CJSX: cx({ ... })":
+    prefix: "cx"
+    body: "\ncx({\n\t$1: $2\n})\n"
+
+  "CJSX: forceUpdate(...)":
+    prefix: "fup"
+    body: "\nforceUpdate(${1:callback})\n"
+
+  "CJSX: getDefaultProps: () -> {...} ":
+    prefix: "gdp"
+    body: "\ngetDefaultProps: () -> \n\t {\n\t\t${1}\n\t}\n\n"
+
+  "CJSX: getInitialState: () -> {...} ":
+    prefix: "gis"
+    body: "\ngetInitialState: () -> {\n\t\t${1}: ${2}\n\t}\n\n"
+
+  "CJSX: isMounted()":
+    prefix: "ism"
+    body: "\nisMounted()\n"
+
+  # "CJSX: /** @jsx */":
+  #   prefix: "jsx"
+  #   body: "/**\n * @jsx React.DOM\n */\n"
+
+  "CJSX: propTypes { ... }":
+    prefix: "pt"
+    body: "\npropTypes: \n\t${1}: React.PropTypes.${2:string}\n\n"
+
+  # "CJSX: component skeleton": #TODO Implement this in Coffee
+  #   prefix: "rcc"
+  #   body: "/**\n * @jsx React.DOM\n */\n\nvar React = require('React');\n\nvar ${1} = React.createClass({\n\n\trender: function() {\n\t\treturn (\n\t\t\t${0:<div />}\n\t\t);\n\t}\n\n});\n\nmodule.exports = ${1};\n"
+
+  "CJSX: render: () -> ... ":
+    prefix: "ren"
+    body: "\nrender: () -> \n\ (\n\t\t${1:<div />}\n\t)\n\n"
+
+  "CJSX: setState({ ... })":
+    prefix: "sst"
+    body: "\nsetState({\n\t${1}: ${2}\n})\n"
+
+  "CJSX: shouldComponentUpdate: (np, ns) -> ... ":
+    prefix: "scu"
+    body: "\nshouldComponentUpdate: (nextProps, nextState) -> \n\t${1}\n\n"
+
+  "CJSX: @props.":
+    prefix: "props"
+    body: "@props.${1}"
+
+  "CJSX: @state.":
+    prefix: "state"
+    body: "@state.${1}"
+
+  "CJSX: transferPropsTo( ... )":
+    prefix: "trp"
+    body: "\ntransferPropsTo(${1})\n"
+
+  "CJSX: renderComponent(component, container, [callback])":
+    prefix: "rrc"
+    body: "React.renderComponent(${1:<$2 />}, ${3:document.body}${4:, ${5:callback}})"
+}
